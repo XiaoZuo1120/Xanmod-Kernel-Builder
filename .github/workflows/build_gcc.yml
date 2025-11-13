@@ -72,7 +72,6 @@ jobs:
           cp config kernel/xanmod/arch/x86/configs/omen16_defconfig
           cd kernel/xanmod
           make clean
-          sed -i "s/znver4/znver4 -mtune=znver4/g" scripts/Makefile.uarches
           rm -rf vmlinux-gdb.py
           make omen16_defconfig
           make deb-pkg -j$(nproc)
