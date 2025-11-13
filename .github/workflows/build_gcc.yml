@@ -32,7 +32,9 @@ jobs:
           sudo apt update
           sudo apt purge firefox -y
           sudo apt upgrade
-          
+          sudo wget https://mirrors.ustc.edu.cn/repogen/conf/ubuntu-https-4-questing
+          sudo cp ubuntu-https-4-questing /etc/apt/sources.list
+          sudo apt update
           sudo apt install \
             wget \
             build-essential \
